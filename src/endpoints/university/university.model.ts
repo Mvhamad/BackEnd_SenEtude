@@ -1,5 +1,6 @@
 import { Schema, model } from "mongoose";
 import University from "./university.interface";
+import { string } from "joi";
 
 const UniversitySchema = new Schema({
     registrationNumber: {
@@ -7,7 +8,7 @@ const UniversitySchema = new Schema({
         required: true
     },
     logo: {
-        type: Buffer
+        type: String
     },
     libelle: {
         type: String,
